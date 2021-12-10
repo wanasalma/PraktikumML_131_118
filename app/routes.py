@@ -16,7 +16,7 @@ def about():
 
 @app.route("/upload",methods=["GET","POST"])
 def upload():
-    target = os.path.join('app/', 'temp/')
+    target = os.path.join('/app/', 'temp/')
     if request.method == 'POST':
         file = request.files['img'] # 'img' is the id passed in input file form field
         filename = file.filename
