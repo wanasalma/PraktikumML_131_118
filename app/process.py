@@ -37,5 +37,5 @@ def predict_img(path):
     # check prediction
     pred = model.predict(new_image)
     label = np.argmax(pred)
-    os.remove(img_path)
+    #os.remove(img_path)
     return labels[label]
