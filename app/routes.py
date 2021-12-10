@@ -16,8 +16,16 @@ def about():
 
 @app.route("/upload",methods=["GET","POST"])
 def upload():
-    print(os.listdir(APP_ROOT))
-    target = os.path.join('/app/', 'temp/')
+    path = os.path.join(APP_ROOT, 'temp')
+    isExist = os.path.exists(path)
+
+    if not isExist:
+    
+    # Create a new directory because it does not exist 
+        os.makedirs(path)
+        print("The new directory is created!")
+    
+    target = os.path.join(APP_ROOT, 'temp/')
     if request.method == 'POST':
         file = request.files['img'] # 'img' is the id passed in input file form field
         filename = file.filename

@@ -25,11 +25,11 @@ def load_image(img_path, show=False):
 def predict_img(path):
     # load model
     print(os.listdir(APP_ROOT))
-    target = os.path.join('/app/', 'static/')
+    target = os.path.join(APP_ROOT, 'static/')
     model = load_model(target+"ModelMLCNN.h5")
     labels = ["cat", "dog"]
     # image path
-    target = os.path.join('/app/', 'temp/')
+    target = os.path.join(APP_ROOT, 'temp/')
     img_path = (target+path)    # dog
     #img_path = '/media/data/dogscats/test1/19.jpg'      # cat
     # load a single image
