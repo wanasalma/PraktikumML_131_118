@@ -24,7 +24,7 @@ def load_image(img_path, show=False):
 
 def predict_img(path):
     # load model
-    print(APP_ROOT)
+    print(os.listdir(APP_ROOT))
     target = os.path.join('/app/', 'static/')
     model = load_model(target+"ModelMLCNN.h5")
     labels = ["cat", "dog"]
