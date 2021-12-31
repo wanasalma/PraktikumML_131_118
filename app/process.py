@@ -25,7 +25,7 @@ def load_image(img_path, show=False):
 def predict_img(path):
     # load model
     print(os.listdir(APP_ROOT))
-    target = os.path.join(APP_ROOT, 'static/')
+    target = os.path.join("app/", 'static/')
     model = load_model(target+"CNN100%_KelompokML.h5")
     labels = ["apple_6", "apple_braeburn_1", "apple_crimson_snow_1",
               "apple_golden_1", "apple_golden_2", "apple_golden_3",
